@@ -1,0 +1,7 @@
+%{
+  "decimal": {:hex, :decimal, "2.1.1", "5611dca5d4b2c3dd497dec8f68751f1f1a54755e8ed2a966c2633cf885973ad6", [:mix], [], "hexpm", "53cfe5f497ed0e7771ae1a475575603d77425099ba5faef9394932b35020ffcc"},
+  "elixir_uuid": {:hex, :elixir_uuid, "1.2.1", "dce506597acb7e6b0daeaff52ff6a9043f5919a4c3315abb4143f0b00378c097", [:mix], [], "hexpm", "f7eba2ea6c3555cea09706492716b0d87397b88946e6380898c2889d68585752"},
+  "nimble_parsec": {:hex, :nimble_parsec, "1.3.1", "2c54013ecf170e249e9291ed0a62e5832f70a476c61da16f6aac6dca0189f2af", [:mix], [], "hexpm", "2682e3c0b2eb58d90c6375fc0cc30bc7be06f365bf72608804fb9cffa5e1b167"},
+  "protocol_ex": {:hex, :protocol_ex, "0.4.4", "c9717d1c0bdabe37d7653965dc02e78580d0d06a1f86d737b7941b55241f70d6", [:mix], [], "hexpm", "2b78ed0e5ec76f62b0debaf92dc8e795551cdaf7fc22b8816b3d57225020ac99"},
+  "yuri_template": {:hex, :yuri_template, "1.1.0", "04809d53daffd50bf49845568038a4a6eace30561f66a55ee2478024f2bc1abb", [:mix], [{:nimble_parsec, "~> 1.0", [hex: :nimble_parsec, repo: "hexpm", optional: false]}], "hexpm", "5b147fe675d396d687f3902f8eb27ec498630ad3541f182985526d17ddd335c2"},
+}

@@ -1,18 +1,11 @@
 defmodule DCAT do
   @moduledoc """
-  Documentation for `DCAT`.
+  Implementation of the W3C DCAT 3 vocabulary.
+
+  See https://www.w3.org/TR/vocab-dcat-3/.
   """
 
-  @doc """
-  Hello world.
+  import RDF.Namespace
 
-  ## Examples
-
-      iex> DCAT.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
+  act_as_namespace DCAT.NS.DCAT
 end
