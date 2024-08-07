@@ -8,7 +8,10 @@ defmodule DCAT.MixProject do
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       elixirc_paths: elixirc_paths(Mix.env()),
-      deps: deps()
+      deps: deps(),
+
+      # Dialyzer
+      dialyzer: dialyzer()
     ]
   end
 
@@ -20,11 +23,24 @@ defmodule DCAT.MixProject do
 
   defp deps do
     [
-      rdf_ex_dep(:rdf, "~> 1.2"),
-      rdf_ex_dep(:grax, "~> 0.4"),
+      rdf_ex_dep(:rdf, "~> 2.0"),
+      rdf_ex_dep(:grax, "~> 0.5"),
       rdf_ex_dep(:skos, "~> 0.1"),
       rdf_ex_dep(:foaf, "~> 0.1"),
-      rdf_ex_dep(:prov, "~> 0.1")
+      rdf_ex_dep(:prov, "~> 0.1"),
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
+      {:ex_doc, "~> 0.34", only: :dev, runtime: false},
+      {:excoveralls, "~> 0.18", only: :test}
+    ]
+  end
+
+  defp dialyzer do
+    [
+      plt_file: {:no_warn, "priv/plts/dialyzer.plt"},
+      ignore_warnings: ".dialyzer_ignore.exs",
+      # Error out when an ignore rule is no longer useful so we can remove it
+      list_unused_filters: true
     ]
   end
 
