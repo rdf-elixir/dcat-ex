@@ -77,6 +77,13 @@ defmodule DCAT.MixProject do
     ]
   end
 
+  defp rdf_ex_dep(dep, version) do
+    case System.get_env("RDF_EX_PACKAGES_SRC") do
+      "LOCAL" -> {dep, path: "../#{dep}"}
+      _ -> {dep, version}
+    end
+  end
+
   defp dialyzer do
     [
       plt_file: {:no_warn, "priv/plts/dialyzer.plt"},
@@ -84,13 +91,6 @@ defmodule DCAT.MixProject do
       # Error out when an ignore rule is no longer useful so we can remove it
       list_unused_filters: true
     ]
-  end
-
-  defp rdf_ex_dep(dep, version) do
-    case System.get_env("RDF_EX_PACKAGES_SRC") do
-      "LOCAL" -> {dep, path: "../#{dep}"}
-      _ -> {dep, version}
-    end
   end
 
   defp docs do
