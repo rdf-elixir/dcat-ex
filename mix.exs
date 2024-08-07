@@ -1,6 +1,8 @@
 defmodule DCAT.MixProject do
   use Mix.Project
 
+  @scm_url "https://github.com/rdf-elixir/dcat-ex"
+
   @version File.read!("VERSION") |> String.trim()
 
   def project do
@@ -15,6 +17,10 @@ defmodule DCAT.MixProject do
 
       # Dialyzer
       dialyzer: dialyzer(),
+
+      # Docs
+      name: "DCAT.ex",
+      docs: docs(),
 
       # ExCoveralls
       test_coverage: [tool: ExCoveralls],
@@ -62,6 +68,21 @@ defmodule DCAT.MixProject do
       "LOCAL" -> {dep, path: "../#{dep}"}
       _ -> {dep, version}
     end
+  end
+
+  defp docs do
+    [
+      main: "DCAT",
+      source_url: @scm_url,
+      source_ref: "v#{@version}",
+      extras: [
+        {:"README.md", [title: "About"]},
+        {:"CHANGELOG.md", [title: "CHANGELOG"]},
+        {:"CONTRIBUTING.md", [title: "CONTRIBUTING"]},
+        {:"LICENSE.md", [title: "License"]}
+      ],
+      skip_undefined_reference_warnings_on: ["CHANGELOG.md"]
+    ]
   end
 
   defp aliases do
