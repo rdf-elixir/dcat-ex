@@ -7,6 +7,10 @@ This project adheres to [Semantic Versioning](http://semver.org/) and
 
 ## Unreleased
 
+### Added
+
+- Add `DCAT.SPDX.Checksum.equal?/2` function for comparing checksums
+
 ### Fixed
 
 - Fix typo in `spatial_resolution` property name of `DCAT.Distribution` 
