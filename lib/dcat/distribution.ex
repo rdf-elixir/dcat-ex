@@ -26,7 +26,7 @@ defmodule DCAT.Distribution do
     property update_date: DCTerms.modified(), type: :date_time
 
     # The minimum spatial separation resolvable in a dataset distribution, measured in meters.
-    property spacial_resolution: DCAT.spatialResolutionInMeters(), type: :decimal
+    property spatial_resolution: DCAT.spatialResolutionInMeters(), type: :decimal
 
     property byte_size: DCAT.byteSize(), type: :any
 
