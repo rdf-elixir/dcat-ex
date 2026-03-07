@@ -27,14 +27,7 @@ defmodule DCAT.MixProject do
       docs: docs(),
 
       # ExCoveralls
-      test_coverage: [tool: ExCoveralls],
-      preferred_cli_env: [
-        check: :test,
-        coveralls: :test,
-        "coveralls.detail": :test,
-        "coveralls.post": :test,
-        "coveralls.html": :test
-      ]
+      test_coverage: [tool: ExCoveralls]
     ]
   end
 
@@ -107,6 +100,18 @@ defmodule DCAT.MixProject do
         {:"LICENSE.md", [title: "License"]}
       ],
       skip_undefined_reference_warnings_on: ["CHANGELOG.md"]
+    ]
+  end
+
+  def cli do
+    [
+      preferred_envs: [
+        check: :test,
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ]
     ]
   end
 
