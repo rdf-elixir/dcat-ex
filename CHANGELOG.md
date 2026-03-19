@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and
 [Keep a CHANGELOG](http://keepachangelog.com).
 
 
-## Unreleased
+## v0.1.1 - 2026-03-19
 
 Elixir versions < 1.15 are no longer supported.
 
@@ -19,7 +19,7 @@ Elixir versions < 1.15 are no longer supported.
   (was incorrectly named `spacial_resolution`)
 
 
-[Compare v0.1.0...HEAD](https://github.com/rdf-elixir/dcat-ex/compare/v0.1.0...HEAD)
+[Compare v0.1.0...v0.1.1](https://github.com/rdf-elixir/dcat-ex/compare/v0.1.0...v0.1.1)
 
 
 
