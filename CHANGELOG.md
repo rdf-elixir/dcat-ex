@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) and
 
 ## Unreleased
 
+Elixir versions < 1.15 are no longer supported.
+
 ### Added
 
 - Add `DCAT.SPDX.Checksum.equal?/2` function for comparing checksums
